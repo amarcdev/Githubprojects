@@ -1,10 +1,20 @@
-//import 'dart:math';
-//import 'dart:io';
-//import 'package:crosscircle/logic.dart';
-//String celselecusuar = "";
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-jogadausuario() {
-  //int cel = int.parse(celselecusuar);
+class JogadaUsuario extends StatefulWidget {
+  const JogadaUsuario({Key? key}) : super(key: key);
 
-  //return selectusuar;
+  @override
+  _JogadaUsuarioState createState() => _JogadaUsuarioState();
+}
+
+class _JogadaUsuarioState extends State<JogadaUsuario> {
+  void selecCels(String escolhaUsuario) {
+    setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+  }
 }

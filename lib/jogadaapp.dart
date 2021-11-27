@@ -1,10 +1,7 @@
-import 'dart:math';
+import 'rules.dart';
 
-import 'package:crosscircle/logic.dart';
-
-jogadaapp() {
-  int escolhaapp = 0, t = 0, u = 0, v = 0, i = 0, z = 0;
-
+Future jogadaapp() async {
+  int escolhaapp = 0, t = 0, u = 0, i = 0;
   int encontrou = 0;
   for (i = 0; i < cels.length; i++) {
     if (cels[i] == "B" && encontrou == 0) {
@@ -14,6 +11,7 @@ jogadaapp() {
           t = cels.length;
           encontrou = 1;
           i = cels.length;
+          cels[escolhaapp] = "B";
           return escolhaapp;
         }
       }
@@ -24,6 +22,7 @@ jogadaapp() {
           u = 0;
           encontrou = 1;
           i = cels.length;
+          cels[escolhaapp] = "B";
           return escolhaapp;
         }
       }
@@ -38,6 +37,7 @@ jogadaapp() {
             t = cels.length;
             encontrou = 1;
             i = cels.length;
+            cels[escolhaapp] = "B";
             return escolhaapp;
           }
         }
@@ -48,6 +48,7 @@ jogadaapp() {
             u = 0;
             encontrou = 1;
             i = cels.length;
+            cels[escolhaapp] = "B";
             return escolhaapp;
           }
         }

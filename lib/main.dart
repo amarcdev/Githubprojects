@@ -1,10 +1,7 @@
-import 'package:crosscircle/jogadas.dart';
-import 'package:crosscircle/testar.dart';
+import 'package:crosscircle/single.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  jogadas();
-  /* runApp(MaterialApp(
-      home: CrossCircle(
-
-      )*/
+  runApp(MaterialApp(home: CrossCircle()));
 }
