@@ -1,3 +1,5 @@
+import 'package:crosscircle/single.dart';
+import 'package:flutter/material.dart';
 import 'rules.dart';
 
 Future jogadaapp() async {
@@ -12,6 +14,8 @@ Future jogadaapp() async {
           encontrou = 1;
           i = cels.length;
           cels[escolhaapp] = "B";
+          bkcel[escolhaapp] =MaterialStateProperty.all(Colors.brown);
+          icon[escolhaapp] = Icon(Icons.android, size: 80);
           return escolhaapp;
         }
       }
@@ -23,6 +27,8 @@ Future jogadaapp() async {
           encontrou = 1;
           i = cels.length;
           cels[escolhaapp] = "B";
+          bkcel[escolhaapp] =MaterialStateProperty.all(Colors.brown);
+          icon[escolhaapp] = Icon(Icons.android, size: 80);
           return escolhaapp;
         }
       }
@@ -38,6 +44,8 @@ Future jogadaapp() async {
             encontrou = 1;
             i = cels.length;
             cels[escolhaapp] = "B";
+            bkcel[escolhaapp] =MaterialStateProperty.all(Colors.brown);
+            icon[escolhaapp] = Icon(Icons.android, size: 80);
             return escolhaapp;
           }
         }
@@ -49,6 +57,8 @@ Future jogadaapp() async {
             encontrou = 1;
             i = cels.length;
             cels[escolhaapp] = "B";
+            bkcel[escolhaapp] =MaterialStateProperty.all(Colors.brown);
+            icon[escolhaapp] = Icon(Icons.android, size: 80);
             return escolhaapp;
           }
         }
