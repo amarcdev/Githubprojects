@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:crosscircle/jogadaapp.dart';
 import 'package:crosscircle/rules.dart';
 import 'package:flutter/cupertino.dart';
@@ -46,7 +48,7 @@ class _CrossCircleState extends State<CrossCircle> {
 
   snacknaoselec() {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text('O App já acabou de jogar. Sua vez agora!'),
+        content: Text('O App realizou uma jogada. Agora é sua vez!'),
         duration: Duration(seconds: 2),
         action: SnackBarAction(label: 'Teste', onPressed: () {})));
   }
@@ -55,48 +57,57 @@ class _CrossCircleState extends State<CrossCircle> {
     if (i == 1) {
       showDialog<String>(
           context: context,
-          builder: (BuildContext context) =>
-      AlertDialog(
-        title: Text('Temos um vencedor!'),
-        content: SingleChildScrollView(
-          child: ListBody(
-            children: [
-              Text('Que pena! o App ganhou!'),
-            ],
-          ),
-        ),
-        actions: [
-          TextButton(
-            child: const Text('Recomeçar'),
-            onPressed: () {
-              initState();
-            },
-          ),
-        ],
-      ));
+          builder: (BuildContext context) => AlertDialog(
+                title: Text('Temos um vencedor!'),
+                content: SingleChildScrollView(
+                  child: ListBody(
+                    children: [
+                      Text('Que pena! o App ganhou!'),
+                    ],
+                  ),
+                ),
+                actions: [
+                  TextButton(
+                    child: const Text('Recomeçar'),
+                    onPressed: () {
+                      cels = ["I", "I", "I", "I", "I", "I", "I", "I", "I"];
+                      print(cels);
+                      setState(() {
+
+                      });
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
+              ));
     } else if (i == 2) {
       showDialog<String>(
           context: context,
-          builder: (BuildContext context) =>
-      AlertDialog(
-        title: Text('Temos um vencedor!'),
-        content: SingleChildScrollView(
-          child: ListBody(
-            children: [
-              Text('Parabéns! Você ganhou!'),
-            ],
-          ),
-        ),
-        actions: [
-          TextButton(
-            child: const Text('Recomeçar'),
-            onPressed: () {
-              initState();
-            },
-          ),
-        ],
-      ));
-    }else{}
+          builder: (BuildContext context) => AlertDialog(
+                title: Text('Temos um vencedor!'),
+                content: SingleChildScrollView(
+                  child: ListBody(
+                    children: [
+                      Text('Parabéns! Você ganhou!'),
+                    ],
+                  ),
+                ),
+                actions: [
+                  TextButton(
+                    child: const Text('Recomeçar'),
+                    onPressed: () {
+                      cels = ["I", "I", "I", "I", "I", "I", "I", "I", "I"];
+                      print(cels);
+                      setState(() {
+
+
+                      });
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
+              ));
+    } else {}
   }
 
   var aligcross = CrossAxisAlignment.center;
