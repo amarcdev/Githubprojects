@@ -14,7 +14,8 @@ Future jogadaapp() async {
           encontrou = 1;
           i = cels.length;
           cels[escolhaapp] = "B";
-          bkcel[escolhaapp] = MaterialStateProperty.all(Colors.brown);
+          bkcel[escolhaapp] =
+              MaterialStateProperty.all(Colors.brown);
           icon[escolhaapp] = Icon(Icons.android, size: 80);
           return escolhaapp;
         }
@@ -27,7 +28,8 @@ Future jogadaapp() async {
           encontrou = 1;
           i = cels.length;
           cels[escolhaapp] = "B";
-          bkcel[escolhaapp] = MaterialStateProperty.all(Colors.brown);
+          bkcel[escolhaapp] =
+              MaterialStateProperty.all(Colors.brown);
           icon[escolhaapp] = Icon(Icons.android, size: 80);
           return escolhaapp;
         }
@@ -44,7 +46,8 @@ Future jogadaapp() async {
             encontrou = 1;
             i = cels.length;
             cels[escolhaapp] = "B";
-            bkcel[escolhaapp] = MaterialStateProperty.all(Colors.brown);
+            bkcel[escolhaapp] =
+                MaterialStateProperty.all(Colors.brown);
             icon[escolhaapp] = Icon(Icons.android, size: 80);
             return escolhaapp;
           }
@@ -57,7 +60,8 @@ Future jogadaapp() async {
             encontrou = 1;
             i = cels.length;
             cels[escolhaapp] = "B";
-            bkcel[escolhaapp] = MaterialStateProperty.all(Colors.brown);
+            bkcel[escolhaapp] =
+                MaterialStateProperty.all(Colors.brown);
             icon[escolhaapp] = Icon(Icons.android, size: 80);
             return escolhaapp;
           }

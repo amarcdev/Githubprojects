@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:crosscircle/jogadaapp.dart';
 import 'package:crosscircle/rules.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,27 +12,28 @@ class CrossCircle extends StatefulWidget {
 }
 
 var bkcel = [
-  MaterialStateProperty.all(Colors.grey),
-  MaterialStateProperty.all(Colors.grey),
-  MaterialStateProperty.all(Colors.grey),
-  MaterialStateProperty.all(Colors.grey),
-  MaterialStateProperty.all(Colors.grey),
-  MaterialStateProperty.all(Colors.grey),
-  MaterialStateProperty.all(Colors.grey),
-  MaterialStateProperty.all(Colors.grey),
-  MaterialStateProperty.all(Colors.grey)
-];
-var icon = [
-  Icon(null),
-  Icon(null),
-  Icon(null),
-  Icon(null),
-  Icon(null),
-  Icon(null),
-  Icon(null),
-  Icon(null),
-  Icon(null)
-];
+    MaterialStateProperty.all(Colors.grey),
+    MaterialStateProperty.all(Colors.grey),
+    MaterialStateProperty.all(Colors.grey),
+    MaterialStateProperty.all(Colors.grey),
+    MaterialStateProperty.all(Colors.grey),
+    MaterialStateProperty.all(Colors.grey),
+    MaterialStateProperty.all(Colors.grey),
+    MaterialStateProperty.all(Colors.grey),
+    MaterialStateProperty.all(Colors.grey)
+  ];
+  var icon = [
+    Icon(null),
+    Icon(null),
+    Icon(null),
+    Icon(null),
+    Icon(null),
+    Icon(null),
+    Icon(null),
+    Icon(null),
+    Icon(null)
+  ];
+
 
 class _CrossCircleState extends State<CrossCircle> {
   snackselec() {
@@ -53,7 +53,22 @@ class _CrossCircleState extends State<CrossCircle> {
         action: SnackBarAction(label: 'Teste', onPressed: () {})));
   }
 
-  alertrinca(i) {
+  restartcels(){
+    setState(() {
+      for (int s=0;s<9;s++){
+        cels[s]="I";
+      }
+      for (int v=0;v<9;v++){
+        bkcel[v]=MaterialStateProperty.all(Colors.grey);
+      }
+      for (int w=0;w<9;w++){
+        icon[w]=Icon(null);
+      }
+    });
+    Navigator.pop(context);
+  }
+
+  alerttrinca(i) {
     if (i == 1) {
       showDialog<String>(
           context: context,
@@ -70,12 +85,7 @@ class _CrossCircleState extends State<CrossCircle> {
                   TextButton(
                     child: const Text('Recomeçar'),
                     onPressed: () {
-                      cels = ["I", "I", "I", "I", "I", "I", "I", "I", "I"];
-                      print(cels);
-                      setState(() {
-
-                      });
-                      Navigator.pop(context);
+                      restartcels();
                     },
                   ),
                 ],
@@ -96,18 +106,12 @@ class _CrossCircleState extends State<CrossCircle> {
                   TextButton(
                     child: const Text('Recomeçar'),
                     onPressed: () {
-                      cels = ["I", "I", "I", "I", "I", "I", "I", "I", "I"];
-                      print(cels);
-                      setState(() {
-
-
-                      });
-                      Navigator.pop(context);
+                      restartcels();
                     },
                   ),
                 ],
               ));
-    } else {}
+    }
   }
 
   var aligcross = CrossAxisAlignment.center;
@@ -162,7 +166,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[0],
                   ),
@@ -185,7 +189,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[1],
                   ),
@@ -208,7 +212,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[2],
                   ),
@@ -237,7 +241,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[3],
                   ),
@@ -260,7 +264,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[4],
                   ),
@@ -283,7 +287,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[5],
                   ),
@@ -312,7 +316,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[6],
                   ),
@@ -335,7 +339,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[7],
                   ),
@@ -358,7 +362,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           snackselec();
                         }
                       });
-                      alertrinca(trincar());
+                      alerttrinca(trincar());
                     },
                     child: icon[8],
                   ),
