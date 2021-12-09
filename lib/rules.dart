@@ -1,4 +1,4 @@
-var cels = ["I", "I", "I", "I", "I", "I", "I", "I", "I"];
+var cels = ["I", "I", "I", "I", "I", "B", "I", "I", "I"];
 
 trincar() {
   if ((cels[0] == "A" && cels[1] == "A" && cels[2] == "A") ||

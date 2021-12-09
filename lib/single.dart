@@ -160,7 +160,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[0] = "A";
                           icon[0] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();
@@ -183,7 +183,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[1] = "A";
                           icon[1] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();
@@ -206,7 +206,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[2] = "A";
                           icon[2] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();
@@ -235,7 +235,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[3] = "A";
                           icon[3] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();
@@ -258,7 +258,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[4] = "A";
                           icon[4] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();
@@ -281,7 +281,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[5] = "A";
                           icon[5] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();
@@ -310,7 +310,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[6] = "A";
                           icon[6] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();
@@ -333,7 +333,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[7] = "A";
                           icon[7] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();
@@ -356,7 +356,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[8] = "A";
                           icon[8] = iconusuar;
                           snacknaoselec();
-                          jogadaapp();
+                          testar();
                           return;
                         } else {
                           snackselec();

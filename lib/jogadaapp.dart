@@ -11,32 +11,47 @@ var trinc6 = [2, 5, 8];
 var trinc7 = [0, 4, 8];
 var trinc8 = [2, 4, 6];
 
-int resultapp = 5;
-
-testar() {
-  for (int a = 0;a<9;a++){
-    if (cels[a]=="B"){
-      for (int b = 0; b < 3; b++){
-        if (a == trinc1[b]){
-          for(int c=0;c<trinc1.length;c++){
-            if(cels[trinc1[c]]=="I"){
-              //if(a>trinc1[c]){
+Future testar() async {
+  int resultapp = 0;
+  int encontrou = 0;
+  for (int a = 0; a < 9; a++) {
+    if (cels[a] == "B" && encontrou == 0) {
+      for (int b = 0; b < 3; b++) {
+        if (a == trinc1[b]) {
+          for (int c = 0; c < trinc1.length; c++) {
+            if (cels[trinc1[c]] == "I") {
+              if (a > trinc1[c]) {
                 int d = c;
+                c = trinc1.length;
+                b = 3;
+                a = 9;
+                encontrou = 1;
                 resultapp = trinc1[d];
-                return resultapp;
-              }else if(a<trinc1[c]){
+                cels[resultapp] = "B";
+                bkcel[resultapp] = MaterialStateProperty.all(Colors.brown);
+                icon[resultapp] = Icon(Icons.android, size: 80);
+                //return resultapp;
+              } else if (a < trinc1[c]) {
                 int d = c;
+                c = trinc1.length;
+                b = 3;
+                a = 9;
+                encontrou = 1;
                 resultapp = trinc1[d];
-                a=9;
-                return resultapp;
+                cels[resultapp] = "B";
+                bkcel[resultapp] = MaterialStateProperty.all(Colors.brown);
+                icon[resultapp] = Icon(Icons.android, size: 80);
+                //return resultapp;
               }
             }
           }
         }
       }
-    }else{}
+    } else {
+      jogadaapp();
+      a = 9;
+    }
   }
-  
 }
 
 Future jogadaapp() async {
