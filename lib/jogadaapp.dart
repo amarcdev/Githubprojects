@@ -14,20 +14,19 @@ var trinc8 = [2, 4, 6];
 int resultapp = 5;
 
 testar() {
-  for (a = 0;a<9;a++){
+  for (int a = 0;a<9;a++){
     if (cels[a]=="B"){
       for (int b = 0; b < 3; b++){
         if (a == trinc1[b]){
           for(int c=0;c<trinc1.length;c++){
             if(cels[trinc1[c]]=="I"){
-              if(a>trinc1[c]){
+              //if(a>trinc1[c]){
                 int d = c;
                 resultapp = trinc1[d];
                 return resultapp;
               }else if(a<trinc1[c]){
                 int d = c;
-                resultapp = trinc1[d]
-                print(maior);
+                resultapp = trinc1[d];
                 a=9;
                 return resultapp;
               }
