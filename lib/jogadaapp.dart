@@ -2,6 +2,8 @@ import 'package:crosscircle/single.dart';
 import 'package:flutter/material.dart';
 import 'rules.dart';
 
+var posic = [0, 1, 2, 0, 3, 6, 3, 4, 5, 1, 4, 7, 6, 7, 8, 2, 5, 8, 0, 4, 8, 2, 4, 6];
+
 var trinc1 = [0, 1, 2];
 var trinc2 = [0, 3, 6];
 var trinc3 = [3, 4, 5];
@@ -12,37 +14,22 @@ var trinc7 = [0, 4, 8];
 var trinc8 = [2, 4, 6];
 
 Future testar() async {
-  int resultapp = 0;
+  //int resultapp = 0;
   int encontrou = 0;
   for (int a = 0; a < 9; a++) {
     if (cels[a] == "B" && encontrou == 0) {
-      for (int b = 0; b < 3; b++) {
+      for (int b = 0; b < 3; b+=3) {
         if (a == trinc1[b]) {
           for (int c = 0; c < trinc1.length; c++) {
             if (cels[trinc1[c]] == "I") {
-              if (a > trinc1[c]) {
-                int d = c;
-                c = trinc1.length;
-                b = 3;
-                a = 9;
-                encontrou = 1;
-                resultapp = trinc1[d];
-                cels[resultapp] = "B";
-                bkcel[resultapp] = MaterialStateProperty.all(Colors.brown);
-                icon[resultapp] = Icon(Icons.android, size: 80);
-                //return resultapp;
-              } else if (a < trinc1[c]) {
-                int d = c;
-                c = trinc1.length;
-                b = 3;
-                a = 9;
-                encontrou = 1;
-                resultapp = trinc1[d];
-                cels[resultapp] = "B";
-                bkcel[resultapp] = MaterialStateProperty.all(Colors.brown);
-                icon[resultapp] = Icon(Icons.android, size: 80);
-                //return resultapp;
-              }
+              int d = trinc1[c];
+              cels[d] = "B";
+              bkcel[d] = MaterialStateProperty.all(Colors.brown);
+              icon[d] = Icon(Icons.android, size: 80);
+              c = trinc1.length;
+              b = 3;
+              a = 9;
+              encontrou = 1;
             }
           }
         }

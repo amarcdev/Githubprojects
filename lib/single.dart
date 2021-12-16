@@ -69,49 +69,77 @@ class _CrossCircleState extends State<CrossCircle> {
   }
 
   alerttrinca(i) {
-    if (i == 1) {
-      showDialog<String>(
-          context: context,
-          builder: (BuildContext context) => AlertDialog(
-                title: Text('Temos um vencedor!'),
-                content: SingleChildScrollView(
-                  child: ListBody(
-                    children: [
-                      Text('Que pena! o App ganhou!'),
-                    ],
-                  ),
+    switch(i) {
+      case 1:
+        showDialog<String>(
+            context: context,
+            builder: (BuildContext context) => AlertDialog(
+              title: Text('Temos um vencedor!'),
+              content: SingleChildScrollView(
+                child: ListBody(
+                  children: [
+                    Text('Que pena! o App ganhou!'),
+                  ],
                 ),
-                actions: [
-                  TextButton(
-                    child: const Text('Recomeçar'),
-                    onPressed: () {
-                      restartcels();
-                    },
-                  ),
-                ],
-              ));
-    } else if (i == 2) {
-      showDialog<String>(
-          context: context,
-          builder: (BuildContext context) => AlertDialog(
-                title: Text('Temos um vencedor!'),
-                content: SingleChildScrollView(
-                  child: ListBody(
-                    children: [
-                      Text('Parabéns! Você ganhou!'),
-                    ],
-                  ),
+              ),
+              actions: [
+                TextButton(
+                  child: const Text('Recomeçar'),
+                  onPressed: () {
+                    restartcels();
+                  },
                 ),
-                actions: [
-                  TextButton(
-                    child: const Text('Recomeçar'),
-                    onPressed: () {
-                      restartcels();
-                    },
-                  ),
-                ],
-              ));
+              ],
+            ));
+        break;
+      case 2:
+        showDialog<String>(
+            context: context,
+            builder: (BuildContext context) => AlertDialog(
+              title: Text('Temos um vencedor!'),
+              content: SingleChildScrollView(
+                child: ListBody(
+                  children: [
+                    Text('Parabéns! Você ganhou!'),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  child: const Text('Recomeçar'),
+                  onPressed: () {
+                    restartcels();
+                  },
+                ),
+              ],
+            ));
+        break;
+      case 3:
+        showDialog<String>(
+            context: context,
+            builder: (BuildContext context) => AlertDialog(
+              title: Text('O resultado foi empate!'),
+              content: SingleChildScrollView(
+                child: ListBody(
+                  children: [
+                    Text('Não houve vencedores!'),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  child: const Text('Recomeçar'),
+                  onPressed: () {
+                    restartcels();
+                  },
+                ),
+              ],
+            ));
+        break;
+
+      default:
     }
+
   }
 
   var aligcross = CrossAxisAlignment.center;
