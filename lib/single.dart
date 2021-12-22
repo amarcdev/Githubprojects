@@ -1,7 +1,5 @@
-import 'dart:ui';
 import 'package:crosscircle/jogadaapp.dart';
 import 'package:crosscircle/rules.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CrossCircle extends StatefulWidget {
