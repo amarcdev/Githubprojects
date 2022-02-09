@@ -10,28 +10,27 @@ class CrossCircle extends StatefulWidget {
 }
 
 var bkcel = [
-    MaterialStateProperty.all(Colors.grey),
-    MaterialStateProperty.all(Colors.grey),
-    MaterialStateProperty.all(Colors.grey),
-    MaterialStateProperty.all(Colors.grey),
-    MaterialStateProperty.all(Colors.grey),
-    MaterialStateProperty.all(Colors.grey),
-    MaterialStateProperty.all(Colors.grey),
-    MaterialStateProperty.all(Colors.grey),
-    MaterialStateProperty.all(Colors.grey)
-  ];
-  var icon = [
-    Icon(null),
-    Icon(null),
-    Icon(null),
-    Icon(null),
-    Icon(null),
-    Icon(null),
-    Icon(null),
-    Icon(null),
-    Icon(null)
-  ];
-
+  MaterialStateProperty.all(Colors.grey),
+  MaterialStateProperty.all(Colors.grey),
+  MaterialStateProperty.all(Colors.grey),
+  MaterialStateProperty.all(Colors.grey),
+  MaterialStateProperty.all(Colors.grey),
+  MaterialStateProperty.all(Colors.grey),
+  MaterialStateProperty.all(Colors.grey),
+  MaterialStateProperty.all(Colors.grey),
+  MaterialStateProperty.all(Colors.grey)
+];
+var icon = [
+  Icon(null),
+  Icon(null),
+  Icon(null),
+  Icon(null),
+  Icon(null),
+  Icon(null),
+  Icon(null),
+  Icon(null),
+  Icon(null)
+];
 
 class _CrossCircleState extends State<CrossCircle> {
   snackselec() {
@@ -48,96 +47,95 @@ class _CrossCircleState extends State<CrossCircle> {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text('O App realizou uma jogada. Agora é sua vez!'),
         duration: Duration(seconds: 2),
-        action: SnackBarAction(label: 'Teste', onPressed: () {})));
+        action: SnackBarAction(label: '', onPressed: () {})));
   }
 
-  restartcels(){
+  restartcels() {
     setState(() {
-      for (int s=0;s<9;s++){
-        cels[s]="I";
+      for (int s = 0; s < 9; s++) {
+        cels[s] = "I";
       }
-      for (int v=0;v<9;v++){
-        bkcel[v]=MaterialStateProperty.all(Colors.grey);
+      for (int v = 0; v < 9; v++) {
+        bkcel[v] = MaterialStateProperty.all(Colors.grey);
       }
-      for (int w=0;w<9;w++){
-        icon[w]=Icon(null);
+      for (int w = 0; w < 9; w++) {
+        icon[w] = Icon(null);
       }
     });
     Navigator.pop(context);
   }
 
   alerttrinca(i) {
-    switch(i) {
+    switch (i) {
       case 1:
         showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(
-              title: Text('Temos um vencedor!'),
-              content: SingleChildScrollView(
-                child: ListBody(
-                  children: [
-                    Text('Que pena! o App ganhou!'),
+                  title: Text('Temos um vencedor!'),
+                  content: SingleChildScrollView(
+                    child: ListBody(
+                      children: [
+                        Text('Que pena! o App ganhou!'),
+                      ],
+                    ),
+                  ),
+                  actions: [
+                    TextButton(
+                      child: const Text('Recomeçar'),
+                      onPressed: () {
+                        restartcels();
+                      },
+                    ),
                   ],
-                ),
-              ),
-              actions: [
-                TextButton(
-                  child: const Text('Recomeçar'),
-                  onPressed: () {
-                    restartcels();
-                  },
-                ),
-              ],
-            ));
+                ));
         break;
       case 2:
         showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(
-              title: Text('Temos um vencedor!'),
-              content: SingleChildScrollView(
-                child: ListBody(
-                  children: [
-                    Text('Parabéns! Você ganhou!'),
+                  title: Text('Temos um vencedor!'),
+                  content: SingleChildScrollView(
+                    child: ListBody(
+                      children: [
+                        Text('Parabéns! Você ganhou!'),
+                      ],
+                    ),
+                  ),
+                  actions: [
+                    TextButton(
+                      child: const Text('Recomeçar'),
+                      onPressed: () {
+                        restartcels();
+                      },
+                    ),
                   ],
-                ),
-              ),
-              actions: [
-                TextButton(
-                  child: const Text('Recomeçar'),
-                  onPressed: () {
-                    restartcels();
-                  },
-                ),
-              ],
-            ));
+                ));
         break;
       case 3:
         showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(
-              title: Text('O resultado foi empate!'),
-              content: SingleChildScrollView(
-                child: ListBody(
-                  children: [
-                    Text('Não houve vencedores!'),
+                  title: Text('O resultado foi empate!'),
+                  content: SingleChildScrollView(
+                    child: ListBody(
+                      children: [
+                        Text('Não houve vencedores!'),
+                      ],
+                    ),
+                  ),
+                  actions: [
+                    TextButton(
+                      child: const Text('Recomeçar'),
+                      onPressed: () {
+                        restartcels();
+                      },
+                    ),
                   ],
-                ),
-              ),
-              actions: [
-                TextButton(
-                  child: const Text('Recomeçar'),
-                  onPressed: () {
-                    restartcels();
-                  },
-                ),
-              ],
-            ));
+                ));
         break;
 
       default:
     }
-
   }
 
   var aligcross = CrossAxisAlignment.center;
@@ -186,7 +184,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[0] = "A";
                           icon[0] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
@@ -209,7 +207,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[1] = "A";
                           icon[1] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
@@ -232,7 +230,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[2] = "A";
                           icon[2] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
@@ -261,7 +259,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[3] = "A";
                           icon[3] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
@@ -284,7 +282,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[4] = "A";
                           icon[4] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
@@ -307,7 +305,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[5] = "A";
                           icon[5] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
@@ -336,7 +334,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[6] = "A";
                           icon[6] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
@@ -359,7 +357,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[7] = "A";
                           icon[7] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
@@ -382,7 +380,7 @@ class _CrossCircleState extends State<CrossCircle> {
                           cels[8] = "A";
                           icon[8] = iconusuar;
                           snacknaoselec();
-                          testar();
+                          jogadaprincapp();
                           return;
                         } else {
                           snackselec();
